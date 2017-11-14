@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A17389FE-3B65-4B29-B42A-7DDD141C6900}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ME91Lib</RootNamespace>
+    <AssemblyName>ME91Lib</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MiscUtil, Version=0.2.0.0, Culture=neutral, PublicKeyToken=d3c42c4bfacf7596, processorArchitecture=MSIL">
+      <HintPath>..\packages\JonSkeet.MiscUtil.0.2.0\lib\net35\MiscUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\BranchIndexesAttribute.cs" />
+    <Compile Include="Attributes\BranchOffsetAttribute.cs" />
+    <Compile Include="Attributes\ParameterIndexAttribute.cs" />
+    <Compile Include="BranchParameter.cs" />
+    <Compile Include="CodeParameter.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="EcuCode.cs" />
+    <Compile Include="Enumerations\ParameterOffsetDirection.cs" />
+    <Compile Include="Enumerations\ParameterType.cs" />
+    <Compile Include="InjectCode.cs" />
+    <Compile Include="Interfaces\ICode.cs" />
+    <Compile Include="Interfaces\IParameter.cs" />
+    <Compile Include="Interfaces\IParameterValueConverter.cs" />
+    <Compile Include="Interfaces\ISearchParameterLocator.cs" />
+    <Compile Include="ME91Extensions.cs" />
+    <Compile Include="ParameterLocators\DefaultParameterLocator.cs" />
+    <Compile Include="ParameterLocators\ParameterLocatorBase.cs" />
+    <Compile Include="ParameterValueConverters\AddressValueConverter.cs" />
+    <Compile Include="ParameterValueConverters\DefaultValueConverter.cs" />
+    <Compile Include="ParameterValueConverters\PositionValueConverter.cs" />
+    <Compile Include="ParameterValueConverters\RpmValueConverter.cs" />
+    <Compile Include="ParameterValueConverters\SpeedValueConverter.cs" />
+    <Compile Include="ParameterValueConverters\TemperatureValueConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchParameter.cs" />
+    <Compile Include="Structures\Address.cs" />
+    <Compile Include="Structures\BranchInstruction.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
