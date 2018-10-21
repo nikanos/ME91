@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ME91Lib", "ME91Lib\ME91Lib.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ME91Lib.Tests", "ME91Lib.Tests\ME91Lib.Tests.csproj", "{05E43192-3F64-4406-BBC6-5533DED5B4B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ME91Lib.Demo.CLI", "ME91Lib.Demo.CLI\ME91Lib.Demo.CLI.csproj", "{EB36E92F-57C6-4874-8DB2-29175EB39E8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +23,15 @@ Global
 		{05E43192-3F64-4406-BBC6-5533DED5B4B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05E43192-3F64-4406-BBC6-5533DED5B4B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05E43192-3F64-4406-BBC6-5533DED5B4B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB36E92F-57C6-4874-8DB2-29175EB39E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB36E92F-57C6-4874-8DB2-29175EB39E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB36E92F-57C6-4874-8DB2-29175EB39E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB36E92F-57C6-4874-8DB2-29175EB39E8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {241C4A8B-004C-4BE7-A990-E4B8008C7D59}
 	EndGlobalSection
 EndGlobal
